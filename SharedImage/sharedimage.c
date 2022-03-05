@@ -34,7 +34,7 @@ bool sharedImageCheckInitialized(struct SharedImage *image)
 {
   struct SharedMemory *shared=(struct SharedMemory *)image;
   SharedImageLocal *local=(SharedImageLocal *)sharedMemLocal(shared);
-  bool ret=false;
+  bool ret=local->initialized;
   if(local && !local->initialized && sharedMemIsInitialized(shared))
   {
     local->initialized=true;

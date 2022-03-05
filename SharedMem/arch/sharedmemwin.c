@@ -10,7 +10,6 @@
 #include "../internal/sharedmeminternal.h"
 #include "stdio.h"
 #if defined(SHAREDMEM_WIN32)
-#include "windows.h"
 void sharedMemArchNotify(struct SharedMemory *shared)
 {
   SetEvent(shared->arch.eventToOther);
